@@ -1,0 +1,11 @@
+NodeID: StorageNode1
+Network:
+  Port: 5500
+HashTable:
+  NumBuckets: 10
+Log:
+  File: /tmp/test/node_1.log
+Checkpoint:
+  Enabled: true
+  CheckpointFile: /tmp/test/node_1.chkpt
+  WALFile: /tmp/test/node_1.wal

@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+// TODOOOOOOOO
+
+package coordinator;
+
+option go_package = "gen/";
+
+// The Coordinator service definition
+service Coordinator {
+
+}

@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+package node;
+
+option go_package = "gen/";
+
+service Storage {
+
+    rpc Get (StorageGetRequest) returns (StorageGetResponse);
+
+    rpc Put (StoragePutRequest) returns (StoragePutResponse);
+
+    rpc Update (StorageUpdateRequest) returns (StorageUpdateResponse);
+
+    rpc Delete (StorageDeleteRequest) returns (StorageDeleteResponse);
+}
+
+service Health {
+
+}
+
+message StorageGetRequest {
+    string Key = 1;
+}
+
+message StorageGetResponse {
+    bool Found = 1;
+    optional bytes Value = 2;
+}
+
+message StoragePutRequest {
+    string Key = 1;
+    bytes Value = 2;
+}
+
+message StoragePutResponse {
+    bool IsUpdated = 1;
+}
+
+message StorageUpdateRequest {
+    string Key = 1;
+    bytes Value = 2;
+}
+
+message StorageUpdateResponse {
+    bool IsKeyPresent = 1;
+}
+
+message StorageDeleteRequest {
+    string Key = 1;
+}
+
+message StorageDeleteResponse {
+    bool IsKeyPresent = 1;
+}

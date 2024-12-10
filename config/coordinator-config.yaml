@@ -1,0 +1,10 @@
+Nodes:
+  StorageNode1:
+    Host: localhost
+    Port: 5500
+  StorageNode2:
+    Host: localhost
+    Port: 5501
+NumberOfVirtualNodes: 10
+Log:
+  File: /tmp/test/coordinator.log
